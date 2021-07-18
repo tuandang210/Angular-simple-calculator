@@ -1,0 +1,31 @@
+<h2>Simple Calculator</h2>
+
+<label>
+  First number:
+  <input type="number" [(ngModel)]="cal.firstNumber">
+</label><br>
+<label>
+  Second number:
+  <input type="number" [(ngModel)]="cal.secondNumber">
+</label><br>
+<label>
+  Operator:
+  <select [(ngModel)]="cal.ope">
+    <option value="+">Plus</option>
+    <option value="-">Minus</option>
+    <option value="*">Sub</option>
+    <option value="/">Div</option>
+  </select>
+</label><br>
+<h3 *ngIf="cal.ope=='+'">
+  Result: {{cal.firstNumber+cal.secondNumber}}
+</h3>
+<h3 *ngIf="cal.ope=='-'">
+  Result: {{cal.firstNumber-cal.secondNumber}}
+</h3>
+<h3 *ngIf="cal.ope=='*'">
+  Result: {{cal.firstNumber*cal.secondNumber}}
+</h3>
+<h3 *ngIf="cal.ope=='/'">
+  Result: {{cal.firstNumber/cal.secondNumber}}
+</h3>
